@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mypod-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mypod-operator
+  template:
+    metadata:
+      labels:
+        app: mypod-operator
+    spec:
+      serviceAccountName: mypod-operator
+      containers:
+        - name: operator
+          image: ttl.sh/my-op:24h # Change this to your image
+          imagePullPolicy: Always
+          env:
+            - name: PYTHONUNBUFFERED
+              value: "1"

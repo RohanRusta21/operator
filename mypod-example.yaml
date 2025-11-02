@@ -1,0 +1,8 @@
+# mypod-example.yaml
+apiVersion: rohan.com/v1
+kind: MyPod
+metadata:
+  name: mypod-example
+spec:
+  image: nginx
+  replicas: 5
