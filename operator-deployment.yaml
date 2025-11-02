@@ -20,3 +20,5 @@ spec:
           env:
             - name: PYTHONUNBUFFERED
               value: "1"
+            - name: KOPF_RUN_NAMESPACE
+              value: "default"  

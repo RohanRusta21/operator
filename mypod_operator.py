@@ -80,4 +80,5 @@ def delete_pods(body, **kwargs):
         print(f"Error deleting pods: {e}")
 
 if __name__ == '__main__':
-    kopf.run()
+    # Explicitly specify namespace to avoid permission issues
+    kopf.run(namespace="default")

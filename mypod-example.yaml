@@ -5,4 +5,4 @@ metadata:
   name: mypod-example
 spec:
   image: nginx
-  replicas: 5
+  replicas: 10

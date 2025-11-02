@@ -25,4 +25,3 @@ spec:
     plural: mypods
     singular: mypod
     kind: MyPod
-
